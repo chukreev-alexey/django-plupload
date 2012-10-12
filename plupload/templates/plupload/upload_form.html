@@ -1,0 +1,18 @@
+{% extends "core/base.html" %}
+
+{% block head %}
+<script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+<script src="{{ STATIC_URL }}js/json2.js"></script>
+<script src="{{ STATIC_URL }}js/csrf.js"></script>
+{{ form.media }}
+{% endblock %}
+
+{% block body %}
+<div id="container">
+  <h2>Поле 1</h2>
+  <div>{{ form.file1 }}</div>
+  <h2>Поле 2</h2>
+  <div>{{ form.file2 }}</div>
+  <div id="filelist"></div>
+</div>
+{% endblock %}
